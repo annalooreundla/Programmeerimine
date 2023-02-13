@@ -1,0 +1,39 @@
+class cal():   #luuakse klass                         
+    def __init__(self,a,b):             
+        self.a = a
+        self.b = b
+
+    def liitmine(self):   #luuakse funktsioon liitmiseks             
+        return self.a + self.b #tagastatakse funktsiooni operatsioon/väärtus
+    def lahutamine(self):    #luuakse funktsioon lahutamiseks           
+        return self.a - self.b #tagastatakse funktsioon lahutamise operatsiooni tulemus
+    def korrutamine(self):    #luuakse funktsioon korrutamiseks          
+        return self.a * self.b #tagastatakse operatsiooni korrutis
+    def jagamine(self):   #luuakse funktsiooni jagatis              
+        return self.a / self.b #tagastatakse funktsiooni jagatis
+a = int(input("Sisesta esimene number: ")) #tekitatakse võimalus kasutajale sisestada esimest arvu        
+b = int(input("Sisesta teine number: ")) #tekitatakse võimalus kasutajale sisestada teist arvu 
+
+kalk = cal(a,b)  #aktiveerib kogu klassi sees olevad funktsioonid                       
+while True: #luuakse tsükkel, milles küsitakse kasutaja käest vajalikku funktsiooni, juhul kui ei valita 1-4 valikust, siis algab tsükkel uuesti
+    def menu(): #luuakse kasutajale valik-menüü, milles tal on neli kalkulaatori funktsiooni
+        x = ('1. Liitmine \n2. lahutamine\n3. korrutamine\n4. jagamine ')
+        print(x)
+    menu() #ootab seni kuni valik 1-4 on teostatud
+    valik = int(input('Sisesta üks valikutest: ')) #kasutajale antakse võimalus sisestada talle vajalik funktsioon
+    if valik == 1:
+        print("Vastus: ",kalk.liitmine())
+        break
+    elif valik == 2:
+        print("Vastus: ",kalk.lahutamine())
+        break
+    elif valik == 3:
+        print("Vastus: ",kalk.korrutamine())
+        break
+    elif valik == 4:
+        print("Vastus: ",kalk.jagamine())
+        break
+
+
+
+
